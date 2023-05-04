@@ -94,6 +94,9 @@ def drop_columns_and_save(input_file, output_file, keep_columns):
     drop_columns = [col for col in df.columns if col not in keep_columns]
     df.drop(drop_columns, axis=1, inplace=True)
     df['VictimID'] = range(1, len(df)+1)
+    df = df[df['age'] != 'Unknown']
+    df = df.loc[~df.applymap(lambda x: '-' in str(x)).any(axis=1)]
+    df = df.dropna()
     df.to_csv(output_file, index=False)
 
 # Create dataframe from data
@@ -217,6 +220,12 @@ if __name__ == "__main__":
     print("2. Police Killings")
 
     dataChosen = int(input())
+    while dataChosen != 1 and dataChosen!= 2:
+        print("Chose a right Dataset:")
+        print("1. Shop Customer")
+        print("2. Police Killings")
+        dataChosen = int(input())
+
     if dataChosen == 1:
         df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
         identifiers = ["CustomerID"]
@@ -238,26 +247,24 @@ if __name__ == "__main__":
 
         sensitive = ["Spending Score (1-100)"]
     elif dataChosen == 2:
-        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","city","cause","pov","year","pop","college","urate"])
+        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","pov","year","pop","city","p_income"])
         df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
         identifiers = ["VictimID"]
 
         quasi = [
-            "age",
-            "year",
             "pop",
-            "urate",
-            "college",
+            "year",
+            "age",
+            "p_income",
 
         ]
 
         full_quasi = [
-            "age",
-            "year",
-            "pop",
-            "urate",
-            "college",
             "gender",
+            "pop",
+            "year",
+            "age",
+            "p_income",
         ]
 
         sensitive = ["pov"]
@@ -268,6 +275,11 @@ if __name__ == "__main__":
     print("2. Encryption")
 
     method = int(input())
+    while method != 1 and method!= 2:
+        print("Type desired pseudonymization method:")
+        print("1. HMAC")
+        print("2. Encryption")
+        method = int(input())
 
     if method == 1:
         df, table = anonimyze_with_hmac(df, identifiers, key)
@@ -289,7 +301,6 @@ if __name__ == "__main__":
     max_k = 0
     while not found and tries < 10:
         aux_df = reach_k_anonymity(df, k, quasi, full_quasi)
-
         actual_k = compute_k_anonymity(aux_df, full_quasi)
 
         if actual_k >= k:

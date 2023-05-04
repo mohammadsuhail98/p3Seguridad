@@ -89,6 +89,12 @@ def reach_k_anonymity(
         steps += 1
     return aux_df
 
+def drop_columns_and_save(input_file, output_file, keep_columns):
+    df = pd.read_csv(input_file, encoding='latin-1')
+    drop_columns = [col for col in df.columns if col not in keep_columns]
+    df.drop(drop_columns, axis=1, inplace=True)
+    df['VictimID'] = range(1, len(df)+1)
+    df.to_csv(output_file, index=False)
 
 # Create dataframe from data
 df = pd.DataFrame(data)
@@ -206,26 +212,56 @@ if __name__ == "__main__":
     with open("filekey.key", "rb") as f:
         key = f.read()
 
-    identifiers = ["CustomerID"]
+    print("Dataset chosen:")
+    print("1. Shop Customer")
+    print("2. Police Killings")
 
-    quasi = [
-        "Age",
-        "Annual Income ($)",
-        "Work Experience",
-        "Family Size",
-    ]
+    dataChosen = int(input())
+    if dataChosen == 1:
+        df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
+        identifiers = ["CustomerID"]
 
-    full_quasi = [
-        "Gender",
-        "Age",
-        "Annual Income ($)",
-        "Work Experience",
-        "Family Size",
-    ]
+        quasi = [
+            "Age",
+            "Annual Income ($)",
+            "Work Experience",
+            "Family Size",
+        ]
 
-    sensitive = ["Spending Score (1-100)"]
+        full_quasi = [
+            "Gender",
+            "Age",
+            "Annual Income ($)",
+            "Work Experience",
+            "Family Size",
+        ]
 
-    df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
+        sensitive = ["Spending Score (1-100)"]
+    elif dataChosen == 2:
+        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","city","cause","pov","year","pop","college","urate"])
+        df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
+        identifiers = ["VictimID"]
+
+        quasi = [
+            "age",
+            "year",
+            "pop",
+            "urate",
+            "college",
+
+        ]
+
+        full_quasi = [
+            "age",
+            "year",
+            "pop",
+            "urate",
+            "college",
+            "gender",
+        ]
+
+        sensitive = ["pov"]
+
 
     print("Type desired pseudonymization method:")
     print("1. HMAC")

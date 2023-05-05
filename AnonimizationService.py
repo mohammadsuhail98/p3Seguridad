@@ -55,6 +55,16 @@ def perturbe_numeric_columns(df: pd.DataFrame, columns: list) -> pd.DataFrame:
         aux_df[column] = aux_df[column].apply(lambda x: 0 if x < 0 else x)
 
     return aux_df
+def micro_aggregation(df: pd.DataFrame, columns: list) -> pd.DataFrame:
+    aux_df = df.copy()
+    group_size = 10
+    for column in columns:
+        sorted_column = aux_df[column].sort_values()
+        grouped_column = sorted_column.groupby(pd.qcut(sorted_column.index, q=round(len(df)/group_size)))
+        means = grouped_column.mean()
+        aux_df[column] = pd.concat([means], axis=0).sort_index()[aux_df.index].values
+    return aux_df
+
 
 
 def generalize_numeric_columns(df: pd.DataFrame, columns: list) -> pd.DataFrame:
@@ -79,6 +89,7 @@ def reach_k_anonymity(
     while compute_k_anonymity(aux_df, full_quasi) < k and steps < max_steps:
         aux_df = df.copy()
         aux_df = perturbe_numeric_columns(aux_df, [column for column in quasi])
+        #aux_df = micro_aggregation(aux_df, quasi)
         aux_df = generalize_numeric_columns(
             aux_df,
             [
@@ -253,17 +264,15 @@ if __name__ == "__main__":
 
         quasi = [
             "pop",
-            "year",
-            "age",
             "p_income",
 
         ]
 
         full_quasi = [
             "gender",
-            "pop",
             "year",
             "age",
+            "pop",
             "p_income",
         ]
 

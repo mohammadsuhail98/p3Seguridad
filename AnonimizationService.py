@@ -26,7 +26,7 @@ def anonimyze_with_hmac(df: pd.DataFrame, columns: list, key: str) -> tuple:
         for dato in df[column]:
             hash_algorithm = hashes.SHA256()
             h = hmac.HMAC(key, hash_algorithm)
-            h.update(str(dato).encode())
+            h.update(str(dato).encode("utf-8"))
             hash_dato = h.finalize()
             datos_anonimizados.append(hash_dato.hex())
             table.append({"dato": dato, "hash": hash_dato.hex()})
@@ -40,7 +40,7 @@ def anonimyze_with_encryption(
     fernet = Fernet(key)
     for column in columns:
         df[column] = df[column].apply(
-            lambda x: fernet.encrypt(str(x).encode()).decode()
+            lambda x: fernet.encrypt(str(x).encode("utf-8")).decode()
         )
     return df
 
@@ -62,10 +62,9 @@ def micro_aggregation(df: pd.DataFrame, columns: list) -> pd.DataFrame:
         sorted_column = aux_df[column].sort_values()
         grouped_column = sorted_column.groupby(pd.qcut(sorted_column.index, q=round(len(df)/group_size)))
         means = grouped_column.mean()
-        aux_df[column] = pd.concat([means], axis=0).sort_index()[aux_df.index].values
+        means_dict = means.to_dict()
+        aux_df[column] = aux_df[column].apply(lambda x: means_dict[x] if x in means_dict else x)
     return aux_df
-
-
 
 def generalize_numeric_columns(df: pd.DataFrame, columns: list) -> pd.DataFrame:
     aux_df = df.copy()
@@ -86,7 +85,7 @@ def reach_k_anonymity(
     max_steps = 30
     steps = 0
     aux_df = df.copy()
-    hierarchies = {"state_fp": {
+    hierarchies = {"state": {
         "norte": ["ME", "NH", "VT", "NY", "PA", "MI", "WI", "MN"],
         "sur": [ "TX", "AR", "MS", "AL", "TN", "KY", "WV", "VA", "NC", "SC", "GA", "FL", "LA", ],
         "este": ["MA", "RI", "CT", "NJ", "DE", "MD", "DC"],
@@ -101,15 +100,15 @@ def reach_k_anonymity(
         elif noise == 2:
             aux_df = micro_aggregation(aux_df, quasi)
         if dataset == 2:
-            generalize_categorical_columns(aux_df,hierarchies)
-        else :
-            aux_df = generalize_numeric_columns(
-                aux_df,
-                [
-                    {"name": column, "size": max_steps - steps % max_steps + 1}
-                    for column in quasi
-                ],
-            )
+            aux_df = generalize_categorical_columns(aux_df,hierarchies)
+        
+        aux_df = generalize_numeric_columns(
+            aux_df,
+            [
+                {"name": column, "size": max_steps - steps % max_steps + 1}
+                for column in quasi
+            ],
+        )
         steps += 1
     return aux_df
 
@@ -117,7 +116,6 @@ def drop_columns_and_save(input_file, output_file, keep_columns):
     df = pd.read_csv(input_file, encoding='latin-1')
     drop_columns = [col for col in df.columns if col not in keep_columns]
     df.drop(drop_columns, axis=1, inplace=True)
-    df['VictimID'] = range(1, len(df)+1)
     df = df[df['age'] != 'Unknown']
     df = df.loc[~df.applymap(lambda x: '-' in str(x)).any(axis=1)]
     df = df.dropna()
@@ -281,25 +279,22 @@ if __name__ == "__main__":
 
         sensitive = ["Spending Score (1-100)"]
     elif dataChosen == 2:
-        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","state_fp","pov","year","pop","city","p_income"])
+        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["name","age","gender","state","year","pop","city","p_income","cause"])
         df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
-        identifiers = ["VictimID"]
+        identifiers = ["name"]
 
         quasi = [
             "pop",
-            "p_income",
-
+            "age"
         ]
 
         full_quasi = [
-            "gender",
-            "year",
             "age",
             "pop",
-            "p_income",
+            "state"
         ]
 
-        sensitive = ["pov"]
+        sensitive = ["cause"]
 
 
     print("Type desired pseudonymization method:")
@@ -316,7 +311,7 @@ if __name__ == "__main__":
     if method == 1:
         df, table = anonimyze_with_hmac(df, identifiers, key)
 
-        with open("table.csv", "w") as f:
+        with open("table.csv", "w", encoding="utf-8") as f:
             f.write("Dato,Hash\n")
             for row in table:
                 f.write(f"{row['dato']},{row['hash']}\n")
@@ -355,9 +350,17 @@ if __name__ == "__main__":
 
         tries += 1
 
-    print(f"Max k: {max_k}")
+    print(f"Max k obtained: {max_k}")
 
     if not found:
         print("Could not reach desired k-anonymity")
+
+    removed_rows = max_df.groupby(full_quasi).filter(lambda x: len(x) < k and len(x) > 0).size
+
+    print(f"Removed {removed_rows} rows to reach k-anonymity")
+
+    max_df = max_df.groupby(full_quasi).filter(lambda x: len(x) >= k)
+
+    print(max_df.groupby(full_quasi).size().reset_index(name="count"))
 
     max_df.to_csv("anonimyzed.csv", index=False)

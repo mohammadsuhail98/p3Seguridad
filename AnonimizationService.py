@@ -81,22 +81,35 @@ def compute_k_anonymity(df: pd.DataFrame, quasi: list) -> int:
 
 
 def reach_k_anonymity(
-    df: pd.DataFrame, k: int, quasi: list, full_quasi: list
+    df: pd.DataFrame, k: int, quasi: list, full_quasi: list, dataset: int, noise: int
 ) -> pd.DataFrame:
     max_steps = 30
     steps = 0
     aux_df = df.copy()
+    hierarchies = {"state_fp": {
+        "norte": ["ME", "NH", "VT", "NY", "PA", "MI", "WI", "MN"],
+        "sur": [ "TX", "AR", "MS", "AL", "TN", "KY", "WV", "VA", "NC", "SC", "GA", "FL", "LA", ],
+        "este": ["MA", "RI", "CT", "NJ", "DE", "MD", "DC"],
+        "oeste": [ "WA", "OR", "CA", "NV", "ID", "MT", "WY", "UT", "CO", "AZ", "NM", "AK", "HI", ],
+        "centro": ["ND", "SD", "NE", "KS", "OK", "IA", "MO", "IL", "IN", "OH"],
+    }
+}
     while compute_k_anonymity(aux_df, full_quasi) < k and steps < max_steps:
         aux_df = df.copy()
-        aux_df = perturbe_numeric_columns(aux_df, [column for column in quasi])
-        #aux_df = micro_aggregation(aux_df, quasi)
-        aux_df = generalize_numeric_columns(
-            aux_df,
-            [
-                {"name": column, "size": max_steps - steps % max_steps + 1}
-                for column in quasi
-            ],
-        )
+        if noise == 1:
+            aux_df = perturbe_numeric_columns(aux_df, [column for column in quasi])
+        elif noise == 2:
+            aux_df = micro_aggregation(aux_df, quasi)
+        if dataset == 2:
+            generalize_categorical_columns(aux_df,hierarchies)
+        else :
+            aux_df = generalize_numeric_columns(
+                aux_df,
+                [
+                    {"name": column, "size": max_steps - steps % max_steps + 1}
+                    for column in quasi
+                ],
+            )
         steps += 1
     return aux_df
 
@@ -110,6 +123,16 @@ def drop_columns_and_save(input_file, output_file, keep_columns):
     df = df.dropna()
     df.to_csv(output_file, index=False)
 
+def generalize_categorical_columns(df: pd.DataFrame, columns_hierarchies: dict):
+    aux_df = df.copy()
+    for column in columns_hierarchies:
+        for hierarchy in columns_hierarchies[column]:
+            aux_df.loc[
+                aux_df[column].isin(columns_hierarchies[column][hierarchy]),
+                column,
+            ] = hierarchy
+
+    return aux_df
 # Create dataframe from data
 df = pd.DataFrame(data)
 
@@ -258,7 +281,7 @@ if __name__ == "__main__":
 
         sensitive = ["Spending Score (1-100)"]
     elif dataChosen == 2:
-        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","pov","year","pop","city","p_income"])
+        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["age","gender","state_fp","pov","year","pop","city","p_income"])
         df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
         identifiers = ["VictimID"]
 
@@ -301,6 +324,16 @@ if __name__ == "__main__":
     elif method == 2:
         df = anonimyze_with_encryption(df, identifiers, key)
 
+    print("Type desired noise method:")
+    print("1. Perturbation")
+    print("2. Micro-aggreation")
+
+    noise = int(input())
+    while noise != 1 and noise!= 2:
+        print("Type desired noise method:")
+        print("1. Perturbation")
+        print("2. Micro-aggreation")
+        noise = int(input())
     print("Type desired k-anonymity:")
     k = int(input())
 
@@ -309,7 +342,7 @@ if __name__ == "__main__":
     max_df = pd.DataFrame()
     max_k = 0
     while not found and tries < 10:
-        aux_df = reach_k_anonymity(df, k, quasi, full_quasi)
+        aux_df = reach_k_anonymity(df, k, quasi, full_quasi,dataChosen,noise)
         actual_k = compute_k_anonymity(aux_df, full_quasi)
 
         if actual_k >= k:

@@ -1,0 +1,455 @@
+name,age,gender,year,city,state,cause,pop,p_income
+A'donte Washington,16,Male,2015,Millbrook,AL,Gunshot,3779,28375
+Aaron Rutledge,27,Male,2015,Pineville,LA,Gunshot,2769,14678
+Aaron Siler,26,Male,2015,Kenosha,WI,Gunshot,4079,25286
+Aaron Valdez,25,Male,2015,South Gate,CA,Gunshot,4343,17194
+Adam Jovicic,29,Male,2015,Munroe Falls,OH,Gunshot,6809,33954
+Adam Reinhart,29,Male,2015,Phoenix,AZ,Gunshot,4682,15523
+Adrian Hernandez,22,Male,2015,Bakersfield,CA,Gunshot,5027,25949
+Adrian Solis,35,Male,2015,Wilmington,CA,Gunshot,5238,25043
+Alan Alverson,44,Male,2015,Sunset,TX,Gunshot,4832,16778
+Alan James,31,Male,2015,Wyoming,MI,Gunshot,3795,22005
+Albert Hanson Jr,76,Male,2015,Hanford,CA,Gunshot,2786,26916
+Alec Ouzounian,40,Male,2015,Rancho Santa Margarita,CA,Gunshot,9429,51186
+Alexander Long,31,Male,2015,Terre Haute ,IN,Gunshot,3413,25563
+Alexander Myers,23,Male,2015,Indianapolis,IN,Gunshot,5573,25998
+Alexander Rivera,39,Male,2015,Nashville,TN,Gunshot,6315,20027
+Alexia Christian,25,Female,2015,Atlanta,GA,Gunshot,1997,23205
+Alice Brown,24,Female,2015,San Francisco,CA,Gunshot,5286,41676
+Alvin Haynes,57,Male,2015,San Francisco,CA,Death in custody,5740,37455
+Andre Murphy Sr,42,Male,2015,Norfolk,NE,Death in custody,5213,23342
+Andrew Driver,36,Male,2015,Fontana,CA,Gunshot,6460,18376
+Andrew Jackson,26,Male,2015,Chickasha,OK,Gunshot,3348,17695
+Andrew Shipley,49,Male,2015,Medford,OR,Gunshot,5824,21610
+Andrew Toto,54,Male,2015,Derry,NH,Gunshot,4521,32921
+Andrew Valadez,26,Male,2015,Sylmar,CA,Gunshot,3202,22441
+Andrew Williams,48,Male,2015,Putnam Hall,FL,Gunshot,6172,23926
+Andy Martinez,33,Male,2015,El Paso,TX,Gunshot,4160,13231
+Angel Corona Jr,21,Male,2015,Corning,CA,Gunshot,7886,19599
+Angelo West,41,Male,2015,Roxbury,MA,Gunshot,4924,14995
+Anthony Bess,48,Male,2015,Memphis,TN,Gunshot,4228,22968
+Anthony Briggs,36,Male,2015,Huntsville,AL,Gunshot,6018,34698
+Anthony Giaquinta,41,Male,2015,Clarkesville,GA,Gunshot,5601,22085
+Anthony Gomez Jr,29,Male,2015,Lancaster,PA,Gunshot,2742,21868
+Anthony Hill,27,Male,2015,Chamblee,GA,Gunshot,3305,32142
+Anthony Purvis,45,Male,2015,Douglas,GA,Gunshot,4838,21769
+Antonio Perez,32,Male,2015,Los Angeles,CA,Gunshot,2584,15373
+Artago Howard,36,Male,2015,Strong,AR,Gunshot,3245,17853
+Askari Roberts,35,Male,2015,Rome,GA,Taser,4947,20248
+Aurelio Duarte,40,Male,2015,Oklahoma City,OK,Gunshot,5887,17225
+Austin Goodner,18,Male,2015,St Petersburg,FL,Gunshot,5004,26667
+Autumn Steele,34,Female,2015,Burlington,IA,Gunshot,4465,15488
+Benito Osorio,39,Male,2015,Santa Ana,CA,Gunshot,8623,19978
+Benjamin Quezada,21,Male,2015,Baytown,TX,Gunshot,3013,18995
+Bernard Moore,62,Male,2015,Atlanta,GA,Struck by vehicle,3580,14256
+Betty Sexton,43,Female,2015,Gastonia,NC,Gunshot,5876,18843
+Billy Grimm,44,Male,2015,Albuquerque,NM,Gunshot,5203,21170
+Billy Patrick,29,Male,2015,Bunch,OK,Gunshot,4601,20901
+Bobby Gross,35,Male,2015,Washington,DC,Gunshot,2664,86023
+Bradford Leonard,50,Male,2015,Palm Bay,FL,Gunshot,8874,22105
+Brandon Jones,18,Male,2015,Cleveland,OH,Gunshot,2182,14560
+Brandon Lawrence,25,Male,2015,Victoria,TX,Gunshot,6701,27813
+Brandon Rapp,31,Male,2015,Middleton,ID,Gunshot,9680,28125
+Brendon Glenn,29,Male,2015,Los Angeles,CA,Gunshot,2860,42931
+Brian Babb,49,Male,2015,Eugene,OR,Gunshot,5057,20407
+Brian Barbosa,23,Male,2015,South Gate,CA,Gunshot,4179,18047
+Brian Fritze,45,Male,2015,Glenwood Springs,CO,Gunshot,3880,35827
+Brian Pickett,26,Male,2015,Los Angeles,CA,Taser,3078,17893
+Brock Nichols,35,Male,2015,Assaria,KS,Gunshot,3770,31080
+Bruce Steward,34,Male,2015,Colton,OR,Gunshot,4689,25130
+Bruce Zalonka,46,Male,2015,Honolulu,HI,Gunshot,1392,35788
+Byron Herbert,29,Male,2015,Elizabethtown,KY,Gunshot,10220,28556
+Calvon Reid,39,Male,2015,Coconut Creek,FL,Taser,4828,27031
+Carl Lao,28,Male,2015,Stockton,CA,Gunshot,3568,11805
+Carlos Saavedra Ramirez,51,Male,2015,Bisbee,AZ,Gunshot,3035,20428
+Carter Ray Castle,67,Male,2015,Gunlock,KY,Gunshot,2422,12840
+Cary Martin,53,Male,2015,St Augustine,FL,Gunshot,5102,31274
+Caso Jackson,25,Male,2015,Detroit,MI,Gunshot,2560,14177
+Cedrick Bishop,30,Male,2015,Cocoa,FL,Gunshot,2621,13805
+Celin Nunez,24,Male,2015,Houston,TX,Gunshot,4049,16689
+Chance Thompson,35,Male,2015,Marysville,CA,Taser,2367,14746
+Charly 'Africa' Keunang,43,Male,2015,Los Angeles,CA,Gunshot,5222,8206
+Chazsten Freeman,24,Male,2015,Peltzer,SC,Gunshot,5304,22409
+Chris Ingram,29,Male,2015,Morenci,AZ,Gunshot,3357,37579
+Chrislon Talbott,38,Male,2015,Owensboro,KY,Gunshot,3548,33294
+Christopher Finley,31,Male,2015,Jonesboro,AR,Gunshot,3886,22080
+Christopher Healy,36,Male,2015,Portland,OR,Gunshot,7687,21049
+Christopher Mitchell,23,Male,2015,Port Wentworth,GA,Gunshot,18168,37721
+Christopher Prevatt,38,Male,2015,Winchester,VA,Gunshot,6987,21845
+Clifton Reintzel,53,Male,2015,Follansbee,WV,Gunshot,3292,23583
+Cody Evans,24,Male,2015,Provo,UT,Gunshot,6457,14816
+Cody Karasek,26,Male,2015,Rosenberg,TX,Gunshot,10229,22235
+Cornelius Parker,28,Male,2015,Columbia,MO,Gunshot,4377,21264
+Crystal Miley,34,Female,2015,Moultrie,GA,Gunshot,3520,21667
+D'Angelo Stallworth,28,Male,2015,Jacksonville,FL,Gunshot,11284,22472
+DaJuan Graham,40,Male,2015,Silver Spring,MD,Taser,3121,25799
+Dalton Branch,51,Male,2015,New York,NY,Gunshot,4941,21344
+Dana Hlavinka,44,Male,2015,Sidney,NE,Gunshot,4293,30465
+Daniel Brumley,25,Male,2015,Fort Worth,TX,Gunshot,4917,19146
+Daniel Caldwell,56,Male,2015,Marana,AZ,Gunshot,8205,38593
+Daniel Covarrubias,37,Male,2015,Lakewood,WA,Gunshot,3531,21626
+Daniel Davis,58,Male,2015,Clermont,FL,Gunshot,11794,24749
+Daniel Elrod,39,Male,2015,Omaha,NE,Gunshot,2314,16218
+Daniel Mejia,37,Male,2015,San Manuel,AZ,Gunshot,3887,22833
+Daniel Wolfe,35,Male,2015,Union,NJ,Gunshot,4904,39122
+Darin Hutchins,26,Male,2015,Baltimore,MD,Gunshot,1625,11157
+Darrell 'Hubbard' Gatewood,47,Male,2015,Oklahoma City,OK,Taser,1812,22857
+Darrell Brown,31,Male,2015,Hagerstown,MD,Taser,1970,12109
+Darrell Morgan,60,Male,2015,Lancaster,SC,Gunshot,5787,22385
+Darrin Langford,32,Male,2015,Rock Island,IL,Gunshot,2023,20610
+Daryl Myler,45,Male,2015,Rexburg,ID,Gunshot,3481,10987
+David Cuevas,42,Male,2015,Lakeland,FL,Gunshot,5059,21474
+David Gaines,17,Male,2015,Grand Junction,CO,Gunshot,2291,21109
+David Gandara,22,Male,2015,El Paso,TX,Gunshot,3864,18438
+David Garcia,33,Male,2015,Wasco,CA,Gunshot,4934,12741
+David Johnson,18,Male,2015,Wake Forest,NC,Gunshot,5100,30061
+David Kapuscinski,39,Male,2015,Rockwood,MI,Taser,4596,29488
+David Kassick,59,Male,2015,Hanover,PA,Gunshot,4487,30491
+David Lynch,33,Male,2015,Muskogee County,OK,Taser,4745,18370
+David Parker,58,Male,2015,Mansfield,OH,Gunshot,2991,24348
+David Schwalm,58,Male,2015,Constantania,NY,Gunshot,4968,23883
+David Watford,47,Male,2015,Tallulah,LA,Struck by vehicle,3403,15373
+David Werblow,41,Male,2015,Branford,CT,Taser,4066,41609
+Dean Bucheit,64,Male,2015,Los Angeles,CA,Struck by vehicle,4225,21130
+Dean Genova,45,Male,2015,Garden Grove,CA,Gunshot,4791,19598
+Deanne Choate,53,Female,2015,Gardner,KS,Gunshot,4643,33869
+Declan Owen,24,Male,2015,Dublin,NC,Gunshot,6056,16983
+Dedrick Marshall,48,Male,2015,Harvey,LA,Gunshot,4232,23944
+Demaris Turner,29,Male,2015,Lauderhill,FL,Gunshot,6074,20254
+Denis Reyes,40,Male,2015,New York,NY,Death in custody,5169,15656
+Dennis Fiel,34,Male,2015,San Diego,CA,Gunshot,5029,26928
+Denzel Brown,21,Male,2015,Bay Shore,NY,Gunshot,8222,30784
+Derek Cruice,26,Male,2015,Deltona,FL,Gunshot,3536,19921
+Desmond Luster,45,Male,2015,Dallas,TX,Gunshot,4044,14256
+Desmond Willis,25,Male,2015,Harvey,LA,Gunshot,3085,18257
+Deven Guilford,17,Male,2015,Roxand Township,MI,Gunshot,3751,32088
+Devin Gates,24,Male,2015,Santa Clara,CA,Gunshot,6461,26846
+Dewayne Carr,42,Male,2015,Scottsdale,AZ,Gunshot,4542,36099
+Dewayne Ward Jr,29,Male,2015,Antioch,CA,Gunshot,5072,22193
+Dexter Bethea,42,Male,2015,Valdosta,GA,Gunshot,2156,19031
+Dominick Wise,30,Male,2015,Culpeper,VA,Taser,6106,28490
+Don Smith,29,Male,2015,Monon,IN,Gunshot,2733,21858
+Donald 'Dontay' Ivy,39,Male,2015,Albany,NY,Taser,5335,14520
+Donald Hicks,63,Male,2015,Metropolis,IL,Gunshot,3721,25135
+Donald Matkins,49,Male,2015,Lucedale,MS,Gunshot,6604,21837
+Donte Noble,41,Male,2015,Spartanburg,SC,Gunshot,3700,19755
+Donte Sowell,27,Male,2015,Indianapolis,IN,Gunshot,7499,20623
+Doug Sparks,30,Male,2015,Tewksbury,MA,Gunshot,5994,51071
+Douglas Faith,60,Male,2015,San Antonio,TX,Gunshot,8023,21342
+Douglas Harris,77,Male,2015,Birmingham,AL,Gunshot,3708,13968
+Ebin Proctor,19,Male,2015,Cottonwood,AZ,Gunshot,5206,16415
+Edixon Franco,37,Male,2015,Ontario,CA,Gunshot,5950,24026
+Edward Bright Sr,54,Male,2015,Randallstown,MD,Gunshot,3070,37922
+Elias Cavazos,29,Male,2015,Hemet,CA,Gunshot,2886,17632
+Elton Simpson,30,Male,2015,Garland,TX,Gunshot,4775,31009
+Elvin Diaz,24,Male,2015,Hackensack,NJ,Gunshot,6844,35008
+Enoch Gaver,21,Male,2015,Cottonwood,AZ,Gunshot,5206,16415
+Eric Harris,44,Male,2015,Tulsa,OK,Gunshot,3300,16953
+Eric Robinson,40,Male,2015,Eagar,AZ,Gunshot,5269,20644
+Erick Rose,32,Male,2015,Shawnee,OK,Gunshot,4681,31930
+Erick Sanchez,22,Male,2015,El Paso,TX,Gunshot,5921,27255
+Erik Tellez,43,Male,2015,Phoenix,AZ,Gunshot,3082,19343
+Ernesto Flores,52,Male,2015,Pomona,CA,Gunshot,7528,22177
+Ernesto Javier Canepa Diaz,27,Male,2015,Santa Ana,CA,Gunshot,9699,16620
+Ethan Noll,34,Male,2015,Edgewood,NM,Gunshot,4356,27273
+Eugene Smith II,20,Male,2015,Onalaska,TX,Gunshot,6613,26675
+Fednel Rhinvil,25,Male,2015,Salisbury,MD,Gunshot,6493,18976
+Felix David,24,Male,2015,New York,NY,Gunshot,4074,37028
+Feras Morad,20,Male,2015,Long Beach,CA,Gunshot,4863,31776
+Fletcher Stewart,46,Male,2015,Dadeville,AL,Gunshot,4720,18363
+Francis Rose III,42,Male,2015,Apple Valley,CA,Gunshot,4284,23716
+Francis Spivey,43,Male,2015,Las Vegas,NV,Gunshot,4726,23444
+Frank 'Trey' Shephard III,41,Male,2015,Houston,TX,Gunshot,4412,30261
+Fred Liggett Jr,59,Male,2015,Kansas City,MO,Gunshot,4411,25030
+Freddie Gray,25,Male,2015,Baltimore,MD,Death in custody,3544,14227
+Fridoon Rawshannehad,42,Male,2015,San Diego,CA,Gunshot,2674,23467
+Garland Wingo,64,Male,2015,Tallahassee,FL,Gunshot,1911,21261
+Garrett Gagne,22,Male,2015,Chatham,MA,Struck by vehicle,3396,31641
+Garrett Sandeno,24,Male,2015,Edmond,OK,Gunshot,5383,41377
+Gary Collins,63,Male,2015,Miami,OK,Gunshot,2650,18397
+Gary Kendrick,56,Male,2015,Encinitas,CA,Gunshot,4040,40529
+Gary Page,60,Male,2015,Harmony,IN,Gunshot,6460,22384
+Gilbert Fleury,54,Male,2015,Bay Minette,AL,Gunshot,6971,23683
+Glenn Lewis,37,Male,2015,Oklahoma City,OK,Gunshot,5823,20405
+Gordon Kimbrell Jr,22,Male,2015,Navarre,FL,Gunshot,12351,27745
+Gregory Smith,39,Male,2015,Crown Point,IN,Taser,7338,36727
+Grover Sapp Jr,45,Male,2015,Panama City,FL,Gunshot,4239,21693
+Harry Davis,57,Male,2015,Eatonton,GA,Gunshot,3422,20760
+Harvey Oates,42,Male,2015,Fort Ashby,WV,Gunshot,3255,26643
+Hector Morejon,19,Male,2015,Long Beach,CA,Gunshot,4424,17223
+Herbert Hill,26,Male,2015,Oklahoma City,OK,Gunshot,3754,14932
+Howard Brent Means Jr,34,Male,2015,Iuka,MS,Gunshot,6466,18243
+Howard Robbins,69,Male,2015,Stanford,KY,Struck by vehicle,2143,16615
+Hue Dang,64,Female,2015,Hackensack,NJ,Struck by vehicle,3358,27432
+Hung Trieu,35,Male,2015,Houston,TX,Gunshot,7538,21306
+Ian Sherrod,40,Male,2015,Tarboro,NC,Gunshot,2929,20836
+Isaac Holmes,19,Male,2015,St Louis,MO,Gunshot,1325,14048
+Isaac Jimenez,27,Male,2015,Alton,IL,Gunshot,2665,18727
+Izzy Colon,37,Male,2015,Orlando,FL,Gunshot,2537,17433
+Jacob Haglund,17,Male,2015,Bay City,MI,Gunshot,1404,14504
+Jamalis Hall,39,Male,2015,Fort Pierce,FL,Gunshot,732,11338
+James Allen,74,Male,2015,Gastonia,NC,Gunshot,4049,15489
+James Barker,42,Male,2015,Salt Lake City,UT,Gunshot,3745,30391
+James Bushey,47,Male,2015,Palestine,TX,Gunshot,4447,18238
+James Cooper,43,Male,2015,Charleston,SC,Gunshot,8668,38810
+James Damon,46,Male,2015,Craig,CO,Gunshot,2892,39179
+James Ellis,44,Male,2015,Clarendon,NY,Gunshot,4696,30489
+James Greenwell,31,Male,2015,Memphis,TN,Gunshot,3636,22255
+James Horn Jr,47,Male,2015,Green Ridge,MO,Gunshot,4911,24705
+James Jimenez,41,Male,2015,Napa,CA,Gunshot,3524,41719
+James Moore,43,Male,2015,Tulsa,OK,Struck by vehicle,2712,20213
+James Morris,40,Male,2015,Medford,OR,Gunshot,5737,22947
+James Strong,32,Male,2015,Northglenn,CO,Gunshot,6851,30906
+Jamie Croom,31,Male,2015,Baton Rouge,LA,Gunshot,1862,10219
+Jamison Childress,20,Male,2015,Sumas,WA,Gunshot,8196,22021
+Janisha Fonville,20,Female,2015,Charlotte,NC,Gunshot,2986,11184
+Jared Forsyth,33,Male,2015,Ocala,FL,Gunshot,7471,19808
+Jared Johnson,22,Male,2015,New Orleans,LA,Gunshot,678,18029
+Jason Carter,41,Male,2015,Rudioso,NM,Gunshot,6941,18975
+Jason Champion,41,Male,2015,Ridgefield Park,NJ,Struck by vehicle,8810,37476
+Jason Evans,32,Male,2015,Salemburg,NC,Gunshot,5938,19868
+Jason Hendrix,16,Male,2015,Essex,MD,Gunshot,5437,25865
+Jason Moland,29,Male,2015,Modesto,CA,Gunshot,4296,28397
+Jason Smith,42,Male,2015,Columbus,OH,Gunshot,2993,22750
+Javoris Washington,29,Male,2015,Fort Lauderdale,FL,Gunshot,8033,19032
+Jeff Alexander,47,Male,2015,Bakersfield,CA,Gunshot,1354,12297
+Jeffery Adkins,53,Male,2015,Emporia,VA,Gunshot,4523,19423
+Jeffery Kemp,18,Male,2015,Chicago,IL,Gunshot,1781,26314
+Jeffrey Jackson,47,Male,2015,Williamsburg,KY,Death in custody,6740,15289
+Jeffrey Nielson,34,Male,2015,Draper,UT,Gunshot,4748,30625
+Jeffrey Pitts,36,Male,2015,Conyers,GA,Gunshot,6084,29063
+Jeffrey Surnow,63,Male,2015,Waikoloa Village,HI,Struck by vehicle,7883,36696
+Jeremy Anderson,36,Male,2015,Tampa Bay,FL,Gunshot,6993,35194
+Jeremy Kelly,27,Male,2015,Johnsonville,SC,Gunshot,6384,17493
+Jeremy Lett,28,Male,2015,Tallahassee,FL,Gunshot,4498,19218
+Jermonte Fletcher,33,Male,2015,Columbus,OH,Gunshot,4419,16616
+Jerome Caldwell,32,Male,2015,Charleston,SC,Gunshot,2875,37967
+Jerome Nichols,42,Male,2015,Allentown,PA,Gunshot,3436,26001
+Jess Leipold,31,Male,2015,Gettysburg,PA,Gunshot,4923,27355
+Jessica Hernandez,17,Female,2015,Denver,CO,Gunshot,4293,32602
+Jessica Uribe,28,Female,2015,Tuscon ,AZ,Gunshot,6202,20860
+Jessie Williams,24,Male,2015,Bossier City,LA,Gunshot,4302,20396
+Jimmy Foreman,71,Male,2015,England,AR,Gunshot,2979,18750
+Jimmy Robinson Jr,51,Male,2015,Waco,TX,Gunshot,5506,21988
+Joaquin Hernandez,28,Male,2015,Phoenix,AZ,Gunshot,4579,23243
+John Acree,53,Male,2015,Nashville,TN,Gunshot,3307,48922
+John Allen,54,Male,2015,Boulder City,NV,Gunshot,3042,23940
+John Ballard Gorman,45,Male,2015,Robinsonville,MS,Gunshot,5683,22681
+John Kaafi,33,Male,2015,Sarasota,FL,Unknown,3522,27385
+John Marshall,48,Male,2015,Billings,MT,Gunshot,3238,24076
+John O'Keefe,34,Male,2015,Albuquerque,NM,Gunshot,3404,34326
+John Quintero,23,Male,2015,Wichita,KS,Gunshot,4020,22016
+John Sawyer,35,Male,2015,Calimesa,CA,Gunshot,5651,23378
+John Whittaker,33,Male,2015,Anchorage,AK,Gunshot,2619,32902
+Johnathon Guillory,32,Male,2015,Maricopa,AZ,Gunshot,2732,45333
+Jonathan Colley,52,Male,2015,Green,OH,Gunshot,5977,32466
+Jonathan Efraim,30,Male,2015,New York,NY,Gunshot,6081,16670
+Jonathan Harden,23,Male,2015,San Bernadino,CA,Gunshot,6230,26030
+Jonathan McIntosh,35,Male,2015,Cabot,AR,Gunshot,4227,22158
+Jonathan Paul,42,Male,2015,Arlington,TX,Death in custody,5947,14765
+Jonathan Pierce,37,Male,2015,Port St Joe,FL,Gunshot,3660,20769
+Jose Antonio Espinoza Ruiz,56,Male,2015,Levelland,TX,Gunshot,4966,15511
+Jose Ceja,36,Male,2015,Fairfield,CA,Gunshot,4759,28062
+Jose Herrera,27,Male,2015,Delano,CA,Gunshot,13987,15480
+Joseph Biegert,30,Male,2015,Green Bay,WI,Gunshot,4716,23633
+Joseph Caffarello,31,Male,2015,Rosemont,IL,Gunshot,2680,27172
+Joseph Paffen,46,Male,2015,Orlando,FL,Gunshot,3748,17213
+Joseph Potts,51,Male,2015,Rufe,OK,Gunshot,2808,19316
+Joseph Roy,72,Male,2015,Lawrenceville,GA,Gunshot,7956,24332
+Joseph Slater,28,Male,2015,Highland,CA,Death in custody,3859,22628
+Joseph Tassinari,63,Male,2015,Glendale,AZ,Gunshot,6257,30661
+Joseph Weber,28,Male,2015,Sunnyvale,CA,Gunshot,5153,30908
+Joshua Deysie,33,Male,2015,Mesa,AZ,Gunshot,5442,22995
+Joshua Garcia,24,Male,2015,Tahoka,TX,Gunshot,1363,22734
+Joshua Green,27,Male,2015,Marion,IL,Gunshot,4792,19474
+Justin Fowler,24,Male,2015,Lukachukai,AZ,Gunshot,5808,13130
+Justin Tolkinen,28,Male,2015,St Paul,MN,Gunshot,4264,23280
+Justin Way,28,Male,2015,St Augustine,FL,Gunshot,26826,40021
+Justus Howell,17,Male,2015,Zion,IL,Gunshot,3111,21955
+Karen Janks,46,Female,2015,Sebastopol,CA,Gunshot,4082,33918
+Karl Taylor,52,Male,2015,Fallsburg,NY,Death in custody,3535,19136
+Kavonda Payton,39,Male,2015,Aurora,CO,Gunshot,3219,25279
+Kaylene Stone,49,Female,2015,Peoria ,AZ,Gunshot,3803,23974
+Kelvin Goldston,30,Male,2015,Fort Worth,TX,Gunshot,5863,29893
+Ken Cockerel,51,Male,2015,Phoenix,AZ,Gunshot,3817,23250
+Kendre Alston,16,Male,2015,Jacksonville,FL,Gunshot,4294,14754
+Kenneth Brown,18,Male,2015,Guthrie,OK,Gunshot,3014,16463
+Kenneth Buck,22,Male,2015,Chandler,AZ,Gunshot,4378,32211
+Kenneth Dothard,40,Male,2015,Carrollton,GA,Gunshot,8081,25418
+Kenneth Kreyssig,61,Male,2015,Smyrna,ME,Gunshot,3045,18760
+Kenneth Mathena,52,Male,2015,Smyrna,DE,Gunshot,13561,34176
+Kent Norman,51,Male,2015,Indianapolis,IN,Gunshot,6142,25226
+Kevin Allen,36,Male,2015,Lyndhurst,NJ,Gunshot,4702,36305
+Kevin Norton,36,Male,2015,Roosevelt,UT,Gunshot,7753,31491
+Kimber Key,59,Male,2015,Columbia,SC,Gunshot,3276,41145
+Kristiana Coignard,17,Female,2015,Longview,TX,Gunshot,4045,14332
+Kyle Baker,18,Male,2015,Trenton,MI,Gunshot,3088,26583
+Larry Hostetter,41,Male,2015,Nocona,TX,Gunshot,1683,23750
+Larry Kobuk,33,Male,2015,Anchorage,AK,Death in custody,5733,20075
+Lavall Hall,25,Male,2015,Miami Gardens,FL,Gunshot,4945,26067
+Ledarius Williams,23,Male,2015,St Louis,MO,Gunshot,3641,17693
+Leslie Sapp III,47,Male,2015,Pittsburgh,PA,Gunshot,4667,18978
+Lester Brown,58,Male,2015,Penrose,NC,Gunshot,5006,19645
+Lewis Lembke,47,Male,2015,Aloha,OR,Gunshot,4978,29959
+Lionel Young,34,Male,2015,Landover,MD,Gunshot,3715,35089
+Loren Simpson,28,Male,2015,Huntley,MT,Gunshot,7864,28125
+Lorenzo Hayes,37,Male,2015,Spokane,WA,Death in custody,4502,17901
+Louis Becker,87,Male,2015,Catskill,NY,Struck by vehicle,3947,27077
+Lue Vang,39,Male,2015,Boulder,CO,Gunshot,4630,54036
+Luis Molina Martinez,35,Male,2015,Los Angeles,CA,Gunshot,4371,12376
+Mack Long,36,Male,2015,Indianapolis,IN,Gunshot,1471,20072
+Marcus Golden,24,Male,2015,St Paul,MN,Gunshot,2391,11425
+Marcus Wheeler,26,Male,2015,Omaha,NE,Gunshot,4283,22537
+Mario Jordan,34,Male,2015,Chesapeake,VA,Gunshot,7340,26119
+Mark Adair,51,Male,2015,Columbia,MO,Gunshot,2917,5457
+Mark Cecil Hawkins,49,Male,2015,Salemburg,OR,Gunshot,4083,17474
+Mark Farrar,41,Male,2015,Rockford,IL,Gunshot,5199,15542
+Mark Smith,54,Male,2015,Kellyville,OK,Gunshot,3954,24858
+Markell Atkins,36,Male,2015,Memphis,TN,Gunshot,6876,19029
+Markus Clark,26,Male,2015,Fort Lauderdale,FL,Unknown,3441,13143
+Matautu Nuu,35,Male,2015,Stockton,CA,Gunshot,3140,17026
+Matthew Ajibade,22,Male,2015,Savannah,GA,Death in custody,5502,25190
+Matthew Belk,27,Male,2015,Huntingdon,TN,Gunshot,4517,19400
+Matthew Coates,42,Male,2015,Sacramento,CA,Gunshot,5372,30332
+Matthew Hoffman,32,Male,2015,San Francisco,CA,Gunshot,5731,64657
+Matthew Lundy,32,Male,2015,Eaton Rapids Township,MI,Gunshot,3021,33875
+Matthew Metz,25,Male,2015,Tempe,AZ,Gunshot,2485,25839
+Meagan Hockaday,26,Female,2015,Oxnard,CA,Gunshot,3172,29511
+Michael Asher,53,Male,2015,Chavies,KY,Gunshot,2911,21506
+Michael Casper,26,Male,2015,Boise,ID,Gunshot,5726,20296
+Michael Foster,40,Male,2015,Wilmore,KY,Gunshot,8064,17696
+Michael Gallagher,55,Male,2015,Enfield,NC,Taser,5329,13939
+Michael Goebel,29,Male,2015,Robertsville,MO,Gunshot,7585,27917
+Michael Ireland,31,Male,2015,Springfield,MO,Gunshot,2816,13929
+Michael Kocher Jr,19,Male,2015,Kaumakani,HI,Struck by vehicle,4189,30533
+Michael Lemon,57,Male,2015,Lake Isabella,CA,Taser,4466,18472
+Michael Lowrey,40,Male,2015,Somerset,PA,Gunshot,6530,20297
+Michael McKillop,35,Male,2015,Claymount,DE,Gunshot,4480,30723
+Michael Murphy,35,Male,2015,Beacon,NY,Gunshot,4865,23011
+Michael Rodriguez,39,Male,2015,Evans,CO,Gunshot,4129,18022
+Michael Smashey,37,Male,2015,Powder Springs,GA,Gunshot,5456,49269
+Millard Tallant III,62,Male,2015,Snohomish,WA,Gunshot,5169,11405
+Monique Deckard,43,Female,2015,Anaheim,CA,Gunshot,5062,21008
+Mychael Lynch,32,Male,2015,Vancouver,WA,Death in custody,2150,15892
+Nadir Soofi,34,Male,2015,Garland,TX,Gunshot,4775,31009
+Naeschylus Vinzant,37,Male,2015,Aurora,CO,Gunshot,6415,21082
+Natasha McKenna,37,Female,2015,Fairfax,VA,Taser,7408,5688
+Nathan Massey,33,Male,2015,Ville Platte,LA,Gunshot,1977,21831
+Nehemiah Fischer,35,Male,2015,Mounds,OK,Gunshot,6888,25231
+Neil Seifert,40,Male,2015,Webster,MA,Gunshot,3776,21131
+Nephi Arriguin,21,Male,2015,Cerritos,CA,Gunshot,5931,42774
+Nicholas Brickman,30,Male,2015,Des Moines,IA,Gunshot,3687,16071
+Nicholas Thomas,23,Male,2015,Atlanta,GA,Gunshot,3574,45795
+Nicolas Tewa,26,Male,2015,Phoenix,AZ,Gunshot,4829,16012
+Nikki Burtsfield,39,Female,2015,Gillette,WY,Gunshot,8988,42519
+Norman Cooper,33,Male,2015,San Antonio,TX,Taser,4542,40693
+Nuwnah Laroche,34,Female,2015,Ridgefield Park,NJ,Struck by vehicle,8810,37476
+Omarr Jackson,37,Male,2015,New Orleans,LA,Gunshot,1345,9353
+Orlando Lopez,26,Male,2015,Pueblo,CO,Gunshot,5747,22057
+Pablo Meza,24,Male,2015,Los Angeles,CA,Gunshot,3040,39531
+Patrick Wetter,25,Male,2015,Stockton,CA,Gunshot,7323,15628
+Paul Anderson,31,Male,2015,Anaheim,CA,Gunshot,9738,25755
+Paul Campbell,49,Male,2015,Weymouth,MA,Gunshot,3902,36062
+Paul Johnson,59,Male,2015,Chino,CA,Gunshot,8960,37453
+Pedro 'Pete' Juan Saldivar,50,Male,2015,Del Rio,TX,Gunshot,7556,17402
+Philip Conley,37,Male,2015,Vallejo,CA,Gunshot,7099,34516
+Phillip Burgess,28,Male,2015,Boiling Springs,SC,Gunshot,6309,23844
+Phillip Garcia,26,Male,2015,Houston,TX,Gunshot,2802,40387
+Phillip Watkins,23,Male,2015,San Jose,CA,Gunshot,4866,22132
+Phillip White,32,Male,2015,Vineland,NJ,Death in custody,7621,17401
+Quincy Reed Reindl,24,Male,2015,Bloomington,MN,Gunshot,6185,43458
+Ralph Willis,42,Male,2015,Stillwater,OK,Gunshot,4908,14964
+Randall Torrence,34,Male,2015,Kansas City,KS,Taser,1990,15556
+Raymond Kmetz,68,Male,2015,Minneapolis,MN,Gunshot,4836,28690
+Reginald McGregor,31,Male,2015,Fort Worth,TX,Gunshot,4321,18174
+Richard 'Buddy' Weaver,83,Male,2015,Newalla,OK,Gunshot,5410,25034
+Richard Carlin,35,Male,2015,Reading,PA,Gunshot,4017,20761
+Richard Castilleja,29,Male,2015,San Antonio,TX,Gunshot,3679,26047
+Richard Davis,50,Male,2015,Rochester,NY,Taser,1271,11558
+Richard Hanna,56,Male,2015,Tehachapi,CA,Gunshot,6657,26741
+Richard McClendon,43,Male,2015,Jourdanton,TX,Gunshot,6033,26101
+Richard Reed,38,Male,2015,Topeka,KS,Gunshot,5378,28781
+Ricky Hall,27,Male,2015,Fort Meade,MD,Gunshot,1610,20995
+Roark Cook,36,Male,2015,Kennewick,WA,Gunshot,4284,22348
+Robert Box,55,Male,2015,Grants Pass,OR,Gunshot,2186,23281
+Robert Burdge,36,Male,2015,Bakersfield,CA,Gunshot,3921,21115
+Robert Edwards,68,Male,2015,Lake Jackson,TX,Gunshot,6016,27875
+Robert Francis Mesch,61,Male,2015,Austin,TX,Gunshot,7456,31969
+Robert Frost,46,Male,2015,Pulaski,VA,Gunshot,3721,20153
+Robert Kohl,47,Male,2015,Denham Springs,LA,Gunshot,5375,30540
+Robert Rooker,26,Male,2015,Peebles,OH,Gunshot,4430,18133
+Robert Washington,37,Male,2015,Hawthorne,CA,Gunshot,2666,32242
+Roberto Leon,22,Male,2015,Rio Linda,CA,Gunshot,4315,30472
+Roberto Ornelas,18,Male,2015,Key Largo,FL,Unknown,2355,25977
+Roberto Rodriguez,39,Male,2015,Los Angeles,CA,Gunshot,5158,14162
+Rodney Biggs,49,Male,2015,Gulfport,MS,Gunshot,2923,12930
+Rodney Walker,23,Male,2015,Tulsa,OK,Gunshot,3300,16953
+Rodolfo Velazquez,47,Male,2015,Shafter,CA,Gunshot,4932,21130
+Ronald Sneed,32,Male,2015,Freeport,TX,Gunshot,6118,24236
+Ronell Wade,45,Male,2015,Harvey,IL,Gunshot,4279,19151
+Roy Day,51,Male,2015,Laredo,TX,Gunshot,3999,20900
+RubÌ_å©n GarcÌ__a Villalpando,31,Male,2015,Euless,TX,Gunshot,5917,43062
+Russell Sharrer,54,Male,2015,Pasco,WA,Death in custody,6747,16558
+Ryan Burgess,31,Male,2015,Kingman,AZ,Gunshot,6001,21374
+Salome Rodriguez Jr,23,Male,2015,Pomona,CA,Gunshot,3755,15632
+Salvador Figueroa,29,Male,2015,Las Vegas,NV,Gunshot,4993,19746
+Salvador Muna,28,Male,2015,Phoenix,AZ,Gunshot,4579,23243
+Sam Holmes,31,Male,2015,Fridley,MN,Gunshot,2459,23143
+Santos 'Cuate' Cortez Hernandez,24,Male,2015,Mission,TX,Gunshot,5449,15812
+Sawyer Flache,27,Male,2015,Austin,TX,Gunshot,8776,44430
+Scott Dunham,57,Male,2015,San Jose,CA,Gunshot,4026,17467
+Scott McAllister,39,Male,2015,Middletown,NJ,Gunshot,5447,34053
+Sean Pelletier,38,Male,2015,Portage,MI,Gunshot,5543,33110
+Sergio Navas,34,Male,2015,Burbank,CA,Gunshot,7914,44585
+Shane Watkins,39,Male,2015,Moulton,AL,Gunshot,5791,19149
+Shaquille Barrow,20,Male,2015,Joliet,IL,Gunshot,3362,16065
+Shaun Johnson,35,Male,2015,Kearny,AZ,Gunshot,2747,24352
+Shawn Clyde,36,Male,2015,Hamilton Township,NJ,Gunshot,7010,29056
+Sheldon Haleck,38,Male,2015,Honolulu,HI,Taser,403,21509
+Simon Hubble,33,Male,2015,Alpine,CA,Gunshot,7371,20164
+Sinthanouxay Khottavongsa,57,Male,2015,Minneapolis,MN,Taser,3081,26143
+Stanley Grant,38,Male,2015,Birmingham,AL,Gunshot,3681,21908
+Stanley Watson,72,Male,2015,CaÌ_å±on City,CO,Gunshot,2868,19044
+Stephanie Hill,37,Female,2015,La Paz County,AZ,Gunshot,1548,15686
+Stephen Cunningham,47,Male,2015,Tacoma,WA,Gunshot,2758,21658
+Steven Davenport,43,Male,2015,Meridian,MS,Taser,7590,20685
+Steven Snyder,37,Male,2015,Fond du Lac,WI,Gunshot,6145,20423
+Talbot Schroeder,75,Male,2015,Old Bridge Township,NJ,Gunshot,1753,29741
+Terence Walker,21,Male,2015,Muskogee,OK,Gunshot,1925,15252
+Terrance Kellom,20,Male,2015,Detroit,MI,Gunshot,3501,12961
+Terrance Moxley,29,Male,2015,Mansfield,OH,Taser,2326,11576
+Terry Garnett Jr,37,Male,2015,Elkton,MD,Gunshot,3737,31524
+Terry Price,41,Male,2015,Tulsa,OK,Taser,3630,26566
+Tevin Barkley,22,Male,2015,Miami,FL,Gunshot,5246,16745
+Thaddeus McCarroll,23,Male,2015,Jennings,MO,Gunshot,7671,18371
+Theodore Johnson,64,Male,2015,Cleveland,OH,Gunshot,1548,15871
+Thomas Allen Jr,34,Male,2015,St Louis,MO,Gunshot,2150,11656
+Thomas Hamby,49,Male,2015,Syracuse,UT,Gunshot,11719,36216
+Thong Kien Ma,32,Male,2015,South El Monte,CA,Gunshot,3416,17367
+Tiano Meton,25,Male,2015,Sierra Blanca,TX,Gunshot,3394,14989
+Tiffany Terry,39,Female,2015,Omaha,NE,Gunshot,2646,36394
+Tim Elliott,53,Male,2015,Shelton,WA,Gunshot,4347,18999
+Timothy Jones,27,Male,2015,Ruidoso,NM,Gunshot,6462,26934
+Todd Allen Hodge,36,Male,2015,Hemet,CA,Gunshot,2886,17632
+Todd Jamal Dye,20,Male,2015,Trinidad,CO,Gunshot,2024,15498
+Tommy Smith,39,Male,2015,Arcola,IL,Gunshot,3565,27719
+Tony Robinson,19,Male,2015,Madison,WI,Gunshot,6145,35028
+Tony Ross,34,Male,2015,Sulphur Springs,TX,Taser,4177,19921
+Troy Boyd,36,Male,2015,Ruth,MS,Gunshot,4980,22213
+Tyrel Vick,34,Male,2015,Wapanucka,OK,Gunshot,2032,25110
+Tyrell Larsen,31,Male,2015,Rigby,ID,Gunshot,10818,27347
+Tyrone Ryerson,45,Male,2015,Milwaukee,WI,Gunshot,2657,35316
+Tyson Hubbard,34,Male,2015,Lincoln,NE,Gunshot,5459,26597
+Victor Reyes,31,Male,2015,Houston,TX,Gunshot,5065,29695
+Victor Terrazas,28,Male,2015,Los Angeles,CA,Gunshot,3862,16940
+Vincent Cordaro,57,Male,2015,New City,NY,Gunshot,4164,52896
+Walter Brown III,29,Male,2015,Portsmouth,VA,Gunshot,4996,27535
+Walter Scott,50,Male,2015,North Charleston,SC,Gunshot,4110,14963
+Wendell King,40,Male,2015,Forth Worth,TX,Gunshot,4074,54494
+William 'Rusty' Smith,53,Male,2015,Hoover,AL,Gunshot,4547,42312
+William Campbell,59,Male,2015,Berlin,NJ,Gunshot,5065,31470
+William Chapman II,18,Male,2015,Portsmouth,VA,Gunshot,1640,25262
+William Dick III,28,Male,2015,Tonasket,WA,Taser,4154,18470
+William Poole,52,Male,2015,Gaston,NC,Gunshot,3850,21175
+Yuvette Henderson,38,Female,2015,Oakland,CA,Gunshot,2544,26971
+Zaki Shinwary,48,Male,2015,Fremont,CA,Gunshot,5177,33590

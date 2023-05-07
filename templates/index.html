@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+<title title>Devices</title>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="static/css/index.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+{% endblock %}
+
+{% block body %}
+<div class="title">
+    <h1>
+        Welcome to Our Anonymization Service
+    </h1>
+</div>
+
+<br>
+
+<div class="list">
+    <p>Datasets</p>
+    <div class="page">
+        <div class="select-dropdown">
+            <select>
+                <option value="Customers.csv">Customers.csv</option>
+                <option value="police_killings.csv">police_killings.csv</option>
+                <option value="police_killings_light.csv">police_killings_light.csv</option>
+            </select>
+        </div>
+    </div>
+    
+    <br>
+    
+    <p>Pseudonymization Method</p>
+    <div class="page2">
+        <div class="select-dropdown2">
+            <select>
+                <option value="Encryption">Encryption</option>
+                <option value="Hmac">Hmac</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+    <p>Noise Method</p>
+    <div class="page3">
+        <div class="select-dropdown3">
+            <select>
+                <option value="Perturbation">Perturbation</option>
+                <option value="Micro-aggreation">Micro-aggreation</option>
+            </select>
+        </div>
+    </div>
+    <br>
+
+    <p>Desired K-Anonymity</p>
+    <input type="number" placeholder="Enter Desired K-Anonymity" class="k-anonymity" name="k-anonymity" required>
+
+    <br>
+
+</div>
+
+
+<div class="anonymizeBtn-container">
+    <button id="anonymize" class="anonymizeBtn" type="button"> Anonymize </button>
+</div>
+
+
+<script>
+
+    const datasetSelect = document.querySelector('.select-dropdown select');
+    const pseudonymizationMethodSelect = document.querySelector('.select-dropdown2 select');
+    const noiseMethodSelect = document.querySelector('.select-dropdown3 select');
+    const kAnonymityInput = document.querySelector(".k-anonymity");
+
+
+    document.getElementById('anonymize').addEventListener('click', function() {
+
+        const selectedDataset = datasetSelect.value;
+        const selectedPseudonymizationMethod = pseudonymizationMethodSelect.value;
+        const selectedNoiseMethod = noiseMethodSelect.value;
+        const kAnonymity = kAnonymityInput.value;
+
+        console.log(selectedDataset, selectedPseudonymizationMethod, selectedNoiseMethod, kAnonymity);
+    });
+</script>
+
+{% endblock %}

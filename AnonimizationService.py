@@ -2,6 +2,7 @@ from cryptography.hazmat.primitives import hashes, hmac
 from cryptography.fernet import Fernet
 import pandas as pd
 import numpy as np
+from flask import Flask, render_template, request, redirect, url_for
 
 
 def anonimyze_with_hmac(df: pd.DataFrame, columns: list, key: str) -> tuple:
@@ -120,8 +121,128 @@ def generalize_categorical_columns(df: pd.DataFrame, columns_hierarchies: dict):
 
     return aux_df
 
+# Web server
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route("/anonymize", methods=["POST"])
+def anonymize():
+    data = request.json
+    dataset = data["dataset"]
+    pseudonymization_method = data["pseudonymizationMethod"]
+    noise_method = data["noiseMethod"]
+    k_anonymity = data["kAnonymity"]
+    
+    anonymize_data_web(dataset, pseudonymization_method, noise_method, k_anonymity)
+
+    return "OK"
+
+def anonymize_data_web(dataset, method, noise_method, k):
+    key = None
+    if k != '':
+        k = int(k)
+    else:
+        k = 0
+        
+    with open("filekey.key", "rb") as f:
+        key = f.read()
+            
+    if dataset == "Customers.csv":
+        dataChosen = 1
+        df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
+        identifiers = ["CustomerID"]
+
+        quasi = [
+            "Age",
+            "Annual Income ($)",
+            "Work Experience",
+            "Family Size",
+        ]
+
+        full_quasi = [
+            "Gender",
+            "Age",
+            "Annual Income ($)",
+            "Work Experience",
+            "Family Size",
+        ]
+
+        sensitive = ["Spending Score (1-100)"]
+    elif dataset == "police_killings.csv":
+        dataChosen = 2
+        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["name","age","gender","state","year","pop","city","p_income","cause"])
+        df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
+        identifiers = ["name"]
+
+        quasi = [
+            "pop",
+            "age"
+        ]
+
+        full_quasi = [
+            "age",
+            "pop",
+            "state"
+        ]
+
+        sensitive = ["cause"]
+        
+    if method == "Hmac":
+        df, table = anonimyze_with_hmac(df, identifiers, key)
+
+        with open("table.csv", "w", encoding="utf-8") as f:
+            f.write("Dato,Hash\n")
+            for row in table:
+                f.write(f"{row['dato']},{row['hash']}\n")
+
+    elif method == "Encryption":
+        df = anonimyze_with_encryption(df, identifiers, key)
+
+    if noise_method == "Perturbation":
+        noise = 1
+    elif noise_method == "Micro-aggreation":
+        noise = 2
+
+    tries = 0
+    found = False
+    max_df = pd.DataFrame()
+    max_k = 0
+    while not found and tries < 10:
+        aux_df = reach_k_anonymity(df, k, quasi, full_quasi,dataChosen,noise)
+        actual_k = compute_k_anonymity(aux_df, full_quasi)
+
+        if actual_k >= k:
+            found = True
+            max_df = aux_df
+            max_k = actual_k
+        elif actual_k > max_k:
+            max_k = actual_k
+            max_df = aux_df
+
+        tries += 1
+
+    print(f"Max k obtained: {max_k}")
+
+    if not found:
+        print("Could not reach desired k-anonymity")
+
+    removed_rows = max_df.groupby(full_quasi).filter(lambda x: len(x) < k and len(x) > 0).size
+
+    print(f"Removed {removed_rows} rows to reach k-anonymity")
+
+    max_df = max_df.groupby(full_quasi).filter(lambda x: len(x) >= k)
+
+    print(max_df.groupby(full_quasi).size().reset_index(name="count"))
+
+    max_df.to_csv("anonimyzed.csv", index=False)
+
+        
 
 if __name__ == "__main__":
+    app.run()
     key = None
     with open("filekey.key", "rb") as f:
         key = f.read()

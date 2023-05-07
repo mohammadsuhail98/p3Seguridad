@@ -27,7 +27,6 @@
             <select>
                 <option value="Customers.csv">Customers.csv</option>
                 <option value="police_killings.csv">police_killings.csv</option>
-                <option value="police_killings_light.csv">police_killings_light.csv</option>
             </select>
         </div>
     </div>
@@ -85,6 +84,17 @@
         const kAnonymity = kAnonymityInput.value;
 
         console.log(selectedDataset, selectedPseudonymizationMethod, selectedNoiseMethod, kAnonymity);
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "/anonymize");
+        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhr.send(JSON.stringify({
+            dataset: selectedDataset,
+            pseudonymizationMethod: selectedPseudonymizationMethod,
+            noiseMethod: selectedNoiseMethod,
+            kAnonymity: kAnonymity
+        }));
+
     });
 </script>
 

@@ -20,6 +20,7 @@
 
 <br>
 
+
 <div class="list">
     <p>Datasets</p>
     <div class="page">
@@ -62,9 +63,10 @@
 
 </div>
 
+<div class="loader loader--hidden"></div>
 
 <div class="anonymizeBtn-container">
-    <button id="anonymize" class="anonymizeBtn" type="button"> Anonymize </button>
+    <button id="anonymize" class="anonymizeBtn" type="submit"> Anonymize </button>
 </div>
 
 
@@ -82,6 +84,9 @@
         const selectedPseudonymizationMethod = pseudonymizationMethodSelect.value;
         const selectedNoiseMethod = noiseMethodSelect.value;
         const kAnonymity = kAnonymityInput.value;
+        const loader = document.querySelector(".loader");
+
+        loader.classList.remove("loader--hidden");
 
         console.log(selectedDataset, selectedPseudonymizationMethod, selectedNoiseMethod, kAnonymity);
 
@@ -95,7 +100,14 @@
             kAnonymity: kAnonymity
         }));
 
+        xhr.addEventListener("load", function() {
+            loader.classList.add("loader--hidden");
+            alert("Anonymization completed successfully!");
+        });
+
     });
+    
 </script>
+
 
 {% endblock %}

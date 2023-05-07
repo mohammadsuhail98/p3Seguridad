@@ -2,7 +2,7 @@ from cryptography.hazmat.primitives import hashes, hmac
 from cryptography.fernet import Fernet
 import pandas as pd
 import numpy as np
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, make_response, render_template, request, redirect, url_for
 
 
 def anonimyze_with_hmac(df: pd.DataFrame, columns: list, key: str) -> tuple:
@@ -138,7 +138,9 @@ def anonymize():
     
     anonymize_data_web(dataset, pseudonymization_method, noise_method, k_anonymity)
 
-    return "OK"
+    response = make_response('Success!')
+    response.status = 200
+    return response
 
 def anonymize_data_web(dataset, method, noise_method, k):
     key = None

@@ -244,125 +244,136 @@ def anonymize_data_web(dataset, method, noise_method, k):
         
 
 if __name__ == "__main__":
-    app.run()
-    key = None
-    with open("filekey.key", "rb") as f:
-        key = f.read()
+    
+    print("Choose a launch option:")
+    print("1. Launch Website")
+    print("2. Launch Console")
+    
+    launch_option = int(input())
+    
+    if launch_option == 1:
+            app.run()
+    elif launch_option == 2:
+        key = None
+        with open("filekey.key", "rb") as f:
+            key = f.read()
 
-    print("Dataset chosen:")
-    print("1. Shop Customer")
-    print("2. Police Killings")
-
-    dataChosen = int(input())
-    while dataChosen != 1 and dataChosen!= 2:
-        print("Chose a right Dataset:")
+        print("Dataset chosen:")
         print("1. Shop Customer")
         print("2. Police Killings")
+
         dataChosen = int(input())
+        while dataChosen != 1 and dataChosen!= 2:
+            print("Chose a right Dataset:")
+            print("1. Shop Customer")
+            print("2. Police Killings")
+            dataChosen = int(input())
 
-    if dataChosen == 1:
-        df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
-        identifiers = ["CustomerID"]
+        if dataChosen == 1:
+            df = pd.read_csv("Datasets/Shop Customer Data/Customers.csv")
+            identifiers = ["CustomerID"]
 
-        quasi = [
-            "Age",
-            "Annual Income ($)",
-            "Work Experience",
-            "Family Size",
-        ]
+            quasi = [
+                "Age",
+                "Annual Income ($)",
+                "Work Experience",
+                "Family Size",
+            ]
 
-        full_quasi = [
-            "Gender",
-            "Age",
-            "Annual Income ($)",
-            "Work Experience",
-            "Family Size",
-        ]
+            full_quasi = [
+                "Gender",
+                "Age",
+                "Annual Income ($)",
+                "Work Experience",
+                "Family Size",
+            ]
 
-        sensitive = ["Spending Score (1-100)"]
-    elif dataChosen == 2:
-        drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["name","age","gender","state","year","pop","city","p_income","cause"])
-        df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
-        identifiers = ["name"]
+            sensitive = ["Spending Score (1-100)"]
+        elif dataChosen == 2:
+            drop_columns_and_save("Datasets/Police Killings Data/police_killings.csv","Datasets/Police Killings Data/police_killings_light.csv",["name","age","gender","state","year","pop","city","p_income","cause"])
+            df = pd.read_csv("Datasets/Police Killings Data/police_killings_light.csv", encoding='latin-1')
+            identifiers = ["name"]
 
-        quasi = [
-            "pop",
-            "age"
-        ]
+            quasi = [
+                "pop",
+                "age"
+            ]
 
-        full_quasi = [
-            "age",
-            "pop",
-            "state"
-        ]
+            full_quasi = [
+                "age",
+                "pop",
+                "state"
+            ]
 
-        sensitive = ["cause"]
+            sensitive = ["cause"]
 
 
-    print("Type desired pseudonymization method:")
-    print("1. HMAC")
-    print("2. Encryption")
-
-    method = int(input())
-    while method != 1 and method!= 2:
         print("Type desired pseudonymization method:")
         print("1. HMAC")
         print("2. Encryption")
+
         method = int(input())
+        while method != 1 and method!= 2:
+            print("Type desired pseudonymization method:")
+            print("1. HMAC")
+            print("2. Encryption")
+            method = int(input())
 
-    if method == 1:
-        df, table = anonimyze_with_hmac(df, identifiers, key)
+        if method == 1:
+            df, table = anonimyze_with_hmac(df, identifiers, key)
 
-        with open("table.csv", "w", encoding="utf-8") as f:
-            f.write("Dato,Hash\n")
-            for row in table:
-                f.write(f"{row['dato']},{row['hash']}\n")
+            with open("table.csv", "w", encoding="utf-8") as f:
+                f.write("Dato,Hash\n")
+                for row in table:
+                    f.write(f"{row['dato']},{row['hash']}\n")
 
-    elif method == 2:
-        df = anonimyze_with_encryption(df, identifiers, key)
+        elif method == 2:
+            df = anonimyze_with_encryption(df, identifiers, key)
 
-    print("Type desired noise method:")
-    print("1. Perturbation")
-    print("2. Micro-aggreation")
-
-    noise = int(input())
-    while noise != 1 and noise!= 2:
         print("Type desired noise method:")
         print("1. Perturbation")
         print("2. Micro-aggreation")
+
         noise = int(input())
-    print("Type desired k-anonymity:")
-    k = int(input())
+        while noise != 1 and noise!= 2:
+            print("Type desired noise method:")
+            print("1. Perturbation")
+            print("2. Micro-aggreation")
+            noise = int(input())
+        print("Type desired k-anonymity:")
+        k = int(input())
 
-    tries = 0
-    found = False
-    max_df = pd.DataFrame()
-    max_k = 0
-    while not found and tries < 10:
-        aux_df = reach_k_anonymity(df, k, quasi, full_quasi,dataChosen,noise)
-        actual_k = compute_k_anonymity(aux_df, full_quasi)
+        tries = 0
+        found = False
+        max_df = pd.DataFrame()
+        max_k = 0
+        while not found and tries < 10:
+            aux_df = reach_k_anonymity(df, k, quasi, full_quasi,dataChosen,noise)
+            actual_k = compute_k_anonymity(aux_df, full_quasi)
 
-        if actual_k >= k:
-            found = True
-            max_df = aux_df
-            max_k = actual_k
-        elif actual_k > max_k:
-            max_k = actual_k
-            max_df = aux_df
+            if actual_k >= k:
+                found = True
+                max_df = aux_df
+                max_k = actual_k
+            elif actual_k > max_k:
+                max_k = actual_k
+                max_df = aux_df
 
-        tries += 1
+            tries += 1
 
-    print(f"Max k obtained: {max_k}")
+        print(f"Max k obtained: {max_k}")
 
-    if not found:
-        print("Could not reach desired k-anonymity")
+        if not found:
+            print("Could not reach desired k-anonymity")
 
-    removed_rows = max_df.groupby(full_quasi).filter(lambda x: len(x) < k and len(x) > 0).size
+        removed_rows = max_df.groupby(full_quasi).filter(lambda x: len(x) < k and len(x) > 0).size
 
-    print(f"Removed {removed_rows} rows to reach k-anonymity")
+        print(f"Removed {removed_rows} rows to reach k-anonymity")
 
-    max_df = max_df.groupby(full_quasi).filter(lambda x: len(x) >= k)
+        max_df = max_df.groupby(full_quasi).filter(lambda x: len(x) >= k)
 
-    print(max_df.groupby(full_quasi).size().reset_index(name="count"))
+        print(max_df.groupby(full_quasi).size().reset_index(name="count"))
 
-    max_df.to_csv("anonimyzed.csv", index=False)
+        max_df.to_csv("anonimyzed.csv", index=False)
+    
+    
